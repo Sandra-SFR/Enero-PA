@@ -19,6 +19,9 @@ public class TareaDetallesActivity extends AppCompatActivity {
     private MapView mapView;
     private PointAnnotationManager pointAnnotationManager;
 
+    /**
+     * Vista detalle
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +38,10 @@ public class TareaDetallesActivity extends AppCompatActivity {
         Tarea tarea = db.tareaDao().getByName(name);
         fillData(tarea);
     }
-
+    /**
+     * Rellenar datos de la tarea seleccionada
+     *
+     * */
     private void fillData(Tarea tarea) {
         TextView tvName = findViewById(R.id.tv_tarea_name);
         TextView tvDescription = findViewById(R.id.tv_tarea_description);
@@ -44,5 +50,10 @@ public class TareaDetallesActivity extends AppCompatActivity {
         tvName.setText(tarea.getName());
         tvDescription.setText(tarea.getDescription());
         tvOwner.setText(tarea.getOwner());
+    }
+
+    //TODO modificar
+    public void modify(Tarea tarea){
+        //TODO rellenar metodo
     }
 }

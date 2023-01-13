@@ -39,6 +39,14 @@ public class Tarea {
     }
 
 
+    public Tarea(String name, String description, String owner, boolean done) {
+        this.name = name;
+        this.description = description;
+        this.owner = owner;
+        this.done = done;
+    }
+
+
     public String getName() {
         return name;
     }

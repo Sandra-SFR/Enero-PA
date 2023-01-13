@@ -7,6 +7,7 @@ import androidx.room.Room;
 
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.practicasenerodam.db.AppDatabase;
 import com.example.practicasenerodam.domain.Tarea;
@@ -40,6 +41,11 @@ public class MapaActivity extends AppCompatActivity {
         List<Tarea> tareas = db.tareaDao().getAll();
         addTasksToMap(tareas);
     }
+
+    /**
+     * Vista Registrar con Mapa
+     *
+     * */
     private void addTasksToMap(List<Tarea> tareas) {
         for (Tarea tarea : tareas) {
             Point point = Point.fromLngLat(tarea.getLongitude(), tarea.getLatitude());
@@ -50,20 +56,27 @@ public class MapaActivity extends AppCompatActivity {
         setCameraPosition(Point.fromLngLat(lastTarea.getLongitude(), lastTarea.getLatitude()));
     }
 
+    /**
+     * Inicializar un punto vacio
+     * */
     private void initializePointManager() {
         AnnotationPlugin annotationPlugin = AnnotationPluginImplKt.getAnnotations(mapView);
         AnnotationConfig annotationConfig = new AnnotationConfig();
         pointAnnotationManager = PointAnnotationManagerKt.createPointAnnotationManager(annotationPlugin, annotationConfig);
     }
-
+    /**
+     * Añadir un marcador
+     * */
     private void addMarker(Point point, String title) {
         PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
                 .withPoint(point)
                 .withTextField(title)
-                .withIconImage(BitmapFactory.decodeResource(getResources(), R.mipmap.black_marker));
+                .withIconImage(BitmapFactory.decodeResource(getResources(), R.mipmap.black_marker_icon));
         pointAnnotationManager.create(pointAnnotationOptions);
     }
-
+    /**
+     * Posicion de la camara
+     * */
     private void setCameraPosition(Point point) {
         CameraOptions cameraPosition = new CameraOptions.Builder()
                 .center(point)
@@ -72,5 +85,12 @@ public class MapaActivity extends AppCompatActivity {
                 .bearing(-17.6)
                 .build();
         mapView.getMapboxMap().setCamera(cameraPosition);
+    }
+
+    /**
+     * Boton de volver
+     * */
+    public void goBack(View view){
+        onBackPressed();
     }
 }

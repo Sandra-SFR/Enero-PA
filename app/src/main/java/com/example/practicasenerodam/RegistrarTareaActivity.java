@@ -94,7 +94,7 @@ public class RegistrarTareaActivity extends AppCompatActivity {
     private void addMarker(Point point) {
         PointAnnotationOptions pointAnnotationOptions = new PointAnnotationOptions()
                 .withPoint(point)
-                .withIconImage(BitmapFactory.decodeResource(getResources(), R.mipmap.black_marker));
+                .withIconImage(BitmapFactory.decodeResource(getResources(), R.mipmap.black_marker_icon));
         pointAnnotationManager.create(pointAnnotationOptions);
     }
 
