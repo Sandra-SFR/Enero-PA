@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.register_task) {
+        if (item.getItemId() == R.id.register_tarea) {
             Intent intent = new Intent(this, RegistrarTareaActivity.class);
             startActivity(intent);
             return true;
@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    public void continueButton(View view) {
+    //onClick del buttonAdd (boton del mainActivity)
+    public void buttonAdd(View view) {
 
     }
 }

@@ -6,4 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MapaActivity">
 
+    <com.mapbox.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:mapbox_cameraTargetLat="40.7128"
+        app:mapbox_cameraTargetLng="-74.0060"
+        app:mapbox_cameraZoom="9.0">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:srcCompat="@drawable/black_marker_background"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.mapbox.maps.MapView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
