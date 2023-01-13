@@ -7,4 +7,6 @@
     <string name="btnNewTask">Añadir nuevo</string>
     <string name="no">No</string>
     <string name="yes">Si</string>
+    <string name="are_you_sure_msg">¿Estás seguro?</string>
+    <string name="remove_tarea_msg">Borrar elemento</string>
 </resources>
