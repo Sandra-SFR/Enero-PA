@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Practicas Enero DAM</string>
+    <string name="btnDelete">Borrar</string>
+    <string name="btnCreate">Crear</string>
+    <string name="btnDetails">Detalles</string>
+    <string name="btnNewTask">Añadir nuevo</string>
+    <string name="no">No</string>
+    <string name="yes">Si</string>
+</resources>

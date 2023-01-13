@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Practicas Enero DAM</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnCreate">Do</string>
+    <string name="btnDetails">Details</string>
+    <string name="btnNewTask">Add new</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="are_you_sure_msg">Are you sure?</string>
+    <string name="remove_tarea_msg">Delete task</string>
 </resources>
