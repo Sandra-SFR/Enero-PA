@@ -20,4 +20,7 @@
     <string name="tarea_registered_error">Registered error</string>
     <string name="select_location_message">Select location</string>
     <string name="not_empty_message">There are empty fields</string>
+    <string name="newName">New name</string>
+    <string name="newDescription">New description</string>
+    <string name="newOwner">New owner</string>
 </resources>

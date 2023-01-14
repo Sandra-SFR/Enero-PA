@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
 import com.example.practicasenerodam.R;
+import com.example.practicasenerodam.RegTarActivity;
 import com.example.practicasenerodam.TareaDetallesActivity;
 import com.example.practicasenerodam.db.AppDatabase;
 import com.example.practicasenerodam.domain.Tarea;
@@ -53,6 +54,7 @@ public class TareaAdapter extends RecyclerView.Adapter<TareaAdapter.TareaHolder>
         public Button doTareaButton;
         public Button verDetailsButton;
         public Button deleteTareaButton;
+        public Button modifyTareaButton;
         public View parentView;
 
 
@@ -68,12 +70,16 @@ public class TareaAdapter extends RecyclerView.Adapter<TareaAdapter.TareaHolder>
             verDetailsButton = view.findViewById(R.id.buttonDetails);
             deleteTareaButton = view.findViewById(R.id.buttonDelete);
 
+            modifyTareaButton = view.findViewById(R.id.buttonUpdate);
+
             // Marcar tarea como hecha
             doTareaButton.setOnClickListener(v -> doTarea(getAdapterPosition()));
             // Ver detalles de la tarea
             verDetailsButton.setOnClickListener(v -> seeDetails(getAdapterPosition()));
             // Eliminar tarea
             deleteTareaButton.setOnClickListener(v -> deleteTarea(getAdapterPosition()));
+            //
+            modifyTareaButton.setOnClickListener(v -> modifyTarea(getAdapterPosition()));
 
         }
     }
@@ -111,5 +117,13 @@ public class TareaAdapter extends RecyclerView.Adapter<TareaAdapter.TareaHolder>
                 .setNegativeButton(R.string.no, (dialog, id) -> dialog.dismiss());
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    private void modifyTarea(int position) {
+        Tarea tarea = taskList.get(position);
+
+        Intent intent = new Intent(context, RegTarActivity.class);
+        intent.putExtra("name", tarea.getName());
+        context.startActivity(intent);
     }
 }

@@ -5,6 +5,7 @@ import static com.example.practicasenerodam.db.Constants.DATABASE_NAME;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,10 +16,15 @@ import com.example.practicasenerodam.domain.Tarea;
 import com.mapbox.maps.MapView;
 import com.mapbox.maps.plugin.annotation.generated.PointAnnotationManager;
 
+import java.util.List;
+
 public class TareaDetallesActivity extends AppCompatActivity {
 
     private MapView mapView;
     private PointAnnotationManager pointAnnotationManager;
+
+    private Context context;
+    private List<Tarea> taskList;
 
     /**
      * Vista detalle
@@ -54,8 +60,15 @@ public class TareaDetallesActivity extends AppCompatActivity {
     }
 
     public void buttonModify(View view){
+        //TODO
         Intent intent = new Intent(this, RegTarActivity.class);
         startActivity(intent);
+        /*
+        Tarea tarea = taskList.get(position);
+
+        Intent intent = new Intent(context, TareaDetallesActivity.class);
+        intent.putExtra("name", tarea.getName());
+        context.startActivity(intent);*/
     }
     /**
      *

@@ -46,6 +46,12 @@ public class Tarea {
         this.done = done;
     }
 
+    public Tarea(String name, String description, String owner) {
+        this.name = name;
+        this.description = description;
+        this.owner = owner;
+    }
+
 
     public String getName() {
         return name;
