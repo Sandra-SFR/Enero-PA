@@ -55,6 +55,8 @@ public class TareaAdapter extends RecyclerView.Adapter<TareaAdapter.TareaHolder>
         public Button deleteTareaButton;
         public View parentView;
 
+
+
         public TareaHolder(View view) {
             super(view);
             parentView = view;
@@ -72,6 +74,7 @@ public class TareaAdapter extends RecyclerView.Adapter<TareaAdapter.TareaHolder>
             verDetailsButton.setOnClickListener(v -> seeDetails(getAdapterPosition()));
             // Eliminar tarea
             deleteTareaButton.setOnClickListener(v -> deleteTarea(getAdapterPosition()));
+
         }
     }
     private void doTarea(int position) {

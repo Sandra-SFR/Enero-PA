@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="modify"
+            android:onClick="buttonModify"
             android:text="@string/btnModifyDet" />
 
         <Button
@@ -58,6 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/btnDeleteDet" />
+            android:onClick="goBackButton"
+            android:text="@string/return_message" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

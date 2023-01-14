@@ -72,9 +72,4 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    //onClick del buttonAdd (boton del mainActivity)
-    public void buttonAdd(View view) {
-        Intent intent = new Intent(this, RegTarActivity.class);
-        startActivity(intent);
-    }
 }

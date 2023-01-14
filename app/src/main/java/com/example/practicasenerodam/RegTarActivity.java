@@ -5,6 +5,7 @@ import static com.example.practicasenerodam.db.Constants.DATABASE_NAME;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteConstraintException;
 import android.os.Bundle;
 import android.view.View;
@@ -64,10 +65,11 @@ public class RegTarActivity extends AppCompatActivity {
     }
 
     /**
-     * Vista Registrar sin mapa
+     * 
      * boton de volver
      * */
     public void goBackButton(View view) {
-        onBackPressed();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);;
     }
 }

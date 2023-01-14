@@ -7,6 +7,7 @@ import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.practicasenerodam.db.AppDatabase;
@@ -52,8 +53,18 @@ public class TareaDetallesActivity extends AppCompatActivity {
         tvOwner.setText(tarea.getOwner());
     }
 
-    //TODO modificar
-    public void modify(Tarea tarea){
-        //TODO rellenar metodo
+    public void buttonModify(View view){
+        Intent intent = new Intent(this, RegTarActivity.class);
+        startActivity(intent);
     }
+    /**
+     *
+     * boton de volver
+     * */
+    public void goBackButton(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);;
+    }
+
+
 }

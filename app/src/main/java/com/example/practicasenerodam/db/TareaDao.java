@@ -22,6 +22,10 @@ public interface TareaDao {
     @Query("DELETE FROM tarea WHERE name = :name")
     void deleteByName(String name);
 
+    @Query("UPDATE tarea SET name = :name, description = :description, owner = :owner WHERE name = :name")
+    void update(String name, String description, String owner);
+
+
     @Insert
     void insert(Tarea tarea);
 
