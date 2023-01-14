@@ -59,17 +59,7 @@ public class TareaDetallesActivity extends AppCompatActivity {
         tvOwner.setText(tarea.getOwner());
     }
 
-    public void buttonModify(View view){
-        //TODO
-        Intent intent = new Intent(this, RegTarActivity.class);
-        startActivity(intent);
-        /*
-        Tarea tarea = taskList.get(position);
 
-        Intent intent = new Intent(context, TareaDetallesActivity.class);
-        intent.putExtra("name", tarea.getName());
-        context.startActivity(intent);*/
-    }
     /**
      *
      * boton de volver

@@ -44,7 +44,7 @@ public class RegTarActivity extends AppCompatActivity {
                 .allowMainThreadQueries().build();
         Tarea tarea = db.tareaDao().getByName(name);
         fillData(tarea);
-        modificar(tarea);
+
 
     }
 
